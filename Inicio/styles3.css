@@ -144,18 +144,41 @@ main {
     resize: vertical; 
 }
 
+
+
+/* Estilo del contenedor que contiene los botones */
+.container {
+    display: flex;
+    gap: 30px; /* Espacio entre los botones */
+}
+
+/* Estilo de los botones */
 button {
-    padding: 10px 20px;
+    padding: 30px 60px; /* Aumenta el tamaño de los botones */
     border: none;
     background-color: #4CAF50;
     color: white;
-    font-size: 16px;
+    font-size: 28px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(72, 207, 107, 0.4);
 }
 
 main h2 {
@@ -186,4 +209,100 @@ footer {
     nav ul li {
         margin: 10px 0;
     }
+}
+
+/* Estilos para la tarjeta de presentación */
+.tarjeta {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Estilo para el nombre */
+.tarjeta h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo para el cargo */
+.tarjeta p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: space-around; /* Distribuye las tarjetas con espacio entre ellas */
+    margin: 20px;
+    
+}
+
+.contenedor-tarjetas img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 300px; /* Establece una altura fija para que todas las imágenes tengan la misma altura */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsión */
+    border-radius: 10px; /* Agrega esquinas redondeadas a la imagen */
+}
+
+#productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.producto p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.producto .etiqueta {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 5px 10px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.producto .sabor {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
 }
