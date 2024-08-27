@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Web Sencilla</title>
+    <title>Fake Life</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi Página Web</h1>
+        <h1>Bienvenido a Fake Life</h1>
         <nav>
             <ul>
                 
-                <li><a href="#" id="sobre-nosotros-link">Sobre nosotros</a></li>
-                <li><a href="#" id="productos-link">Proyectos</a></li>
-                <li><a href="#" id="contacto-link">Contacto</a></li>
+                <li><a href="#" id="sobre-nosotros-link" onclick="location.href='pagina1.html'">Sobre nosotros</a></li>
+                <li><a href="#" id="productos-link" onclick="location.href='pagina2.html'">Proyectos</a></li>
+                <li><a href="#" id="contacto-link" onclick="location.href='pagina3.html'">Contactos</a></li>
             </ul>
         </nav>
     </header>
@@ -22,11 +22,16 @@
     <main>
         <section id="contenido">
             <!-- El contenido dinámico aparecerá aquí -->
+            <div class="botonera">
+                <button class="btn" onclick="location.href='pagina1.html'">¿Quienes somos?</button>
+                <button class="btn" onclick="location.href='pagina2.html'">Nuestros Proyectos</button>
+                <button class="btn" onclick="location.href='pagina3.html'">Informacion de contacto</button>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Esta es una pagina falsa. Todos los derechos reservados si es que tenemos.</p>
     </footer>
 
     <script>
@@ -38,30 +43,30 @@
         const contenidoSection = document.getElementById('contenido');
 
         // Función para actualizar el contenido dinámico
-        function actualizarContenido(titulo, contenido) {
-            contenidoSection.innerHTML = `
-                <h2>${titulo}</h2>
-                <p>${contenido}</p>
-            `;
-        }
+        //function actualizarContenido(titulo, contenido) {
+          //  contenidoSection.innerHTML = `
+            //    <h2>${titulo}</h2>
+               // <p>${contenido}</p>
+            //`;
+        //}
 
         // Agrega eventos de clic a cada enlace
        
 
-        sobreMiLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            actualizarContenido('Seccion de informacion sobre nosotros' , 'Acontinaucion pondre informacion sobre nosotros');
-        });
+        //sobreMiLink.addEventListener('click', function(e) {
+           // e.preventDefault();
+            //actualizarContenido('Seccion de informacion sobre nosotros' , 'Acontinaucion pondre informacion sobre nosotros');
+        //});
+        
+        //proyectosLink.addEventListener('click', function(e) {
+          //  e.preventDefault();
+            //actualizarContenido('En esta seccion van los productos etc....', 'producto con valor x y si lo puedes llevar a la pagina de ventas via amazon o mercado libre genail');
+        //});
 
-        proyectosLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            actualizarContenido('En esta seccion van los productos etc....', 'producto con valor x y si lo puedes llevar a la pagina de ventas via amazon o mercado libre genail');
-        });
-
-        contactoLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            actualizarContenido('Contactos',' en general que redireccione a una pagina en instagram o la pantomima etc... ');
-        });
+        //contactoLink.addEventListener('click', function(e) {
+          //  e.preventDefault();
+            //actualizarContenido('Contactos',' en general que redireccione a una pagina en instagram o la pantomima etc... ');
+        //});
     </script>
 </body>
 </html>
