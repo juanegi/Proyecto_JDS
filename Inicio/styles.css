@@ -1,0 +1,116 @@
+/* Mantener el mismo reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Esto asegura que el cuerpo ocupe al menos la altura completa de la ventana */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* El contenido principal crecerá para ocupar el espacio disponible */
+main {
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+main p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    /* Elimina el margin-top y el posicionamiento */
+}
+
+/* Botonera - Estilo de los botones */
+.botonera {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 60px 100px; /* Aumenta el relleno para hacer los botones más grandes */
+    border: none;
+    font-size: 1.5rem;  /* Aumenta el tamaño de la fuente */
+    cursor: pointer;
+    border-radius: 8px; /* Un poco más de radio para suavizar las esquinas */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* Responsividad para los botones */
+@media (max-width: 768px) {
+    .botonera {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem; /* Asegúrate de que el tamaño de fuente también se mantenga grande en pantallas pequeñas */
+    }
+}
