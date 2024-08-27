@@ -33,7 +33,7 @@
     <footer>
         <p>&copy; 2024 Esta es una pagina falsa. Todos los derechos reservados si es que tenemos.</p>
     </footer>
-
+<!--
     <script>
         // Selecciona los enlaces
         
@@ -42,31 +42,32 @@
         const contactoLink = document.getElementById('contacto-link');
         const contenidoSection = document.getElementById('contenido');
 
-        // Función para actualizar el contenido dinámico
-        //function actualizarContenido(titulo, contenido) {
-          //  contenidoSection.innerHTML = `
-            //    <h2>${titulo}</h2>
-               // <p>${contenido}</p>
-            //`;
-        //}
+        Función para actualizar el contenido dinámico
+        function actualizarContenido(titulo, contenido) {
+          contenidoSection.innerHTML = `
+             <h2>${titulo}</h2>
+                <p>${contenido}</p>
+            `;
+        }
 
-        // Agrega eventos de clic a cada enlace
+         Agrega eventos de clic a cada enlace
        
 
-        //sobreMiLink.addEventListener('click', function(e) {
-           // e.preventDefault();
-            //actualizarContenido('Seccion de informacion sobre nosotros' , 'Acontinaucion pondre informacion sobre nosotros');
-        //});
+        sobreMiLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            actualizarContenido('Seccion de informacion sobre nosotros' , 'Acontinaucion pondre informacion sobre nosotros');
+        });
         
-        //proyectosLink.addEventListener('click', function(e) {
-          //  e.preventDefault();
-            //actualizarContenido('En esta seccion van los productos etc....', 'producto con valor x y si lo puedes llevar a la pagina de ventas via amazon o mercado libre genail');
-        //});
+        proyectosLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            actualizarContenido('En esta seccion van los productos etc....', 'producto con valor x y si lo puedes llevar a la pagina de ventas via amazon o mercado libre genail');
+        });
 
-        //contactoLink.addEventListener('click', function(e) {
-          //  e.preventDefault();
-            //actualizarContenido('Contactos',' en general que redireccione a una pagina en instagram o la pantomima etc... ');
-        //});
+        contactoLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            actualizarContenido('Contactos',' en general que redireccione a una pagina en instagram o la pantomima etc... ');
+        });
     </script>
+-->
 </body>
 </html>

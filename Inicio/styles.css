@@ -1,3 +1,4 @@
+/* Mantener el mismo reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,9 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Esto asegura que el cuerpo ocupe al menos la altura completa de la ventana */
 }
 
 header {
@@ -43,9 +47,11 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* El contenido principal crecerá para ocupar el espacio disponible */
 main {
     padding: 2rem;
     text-align: center;
+    flex: 1;
 }
 
 main h2 {
@@ -63,10 +69,8 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    /* Elimina el margin-top y el posicionamiento */
 }
 
 /* Botonera - Estilo de los botones */
@@ -110,4 +114,3 @@ footer {
         font-size: 1.5rem; /* Asegúrate de que el tamaño de fuente también se mantenga grande en pantallas pequeñas */
     }
 }
-
