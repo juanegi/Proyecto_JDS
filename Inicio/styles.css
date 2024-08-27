@@ -1,4 +1,3 @@
-/* Mantener el mismo reset */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,7 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Esto asegura que el cuerpo ocupe al menos la altura completa de la ventana */
+    min-height: 100vh;
 }
 
 header {
@@ -20,8 +19,40 @@ header {
     color: white;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 150px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9BDCB8;
+    border-bottom: 2px solid #00796b;
+}
 header h1 {
     margin-bottom: 0.5rem;
 }
@@ -41,17 +72,90 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #e0e0e0;
 }
 
-/* El contenido principal crecerá para ocupar el espacio disponible */
 main {
     padding: 2rem;
     text-align: center;
     flex: 1;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.contact-image,
+.contact-form {
+    flex: 1;
+    min-width: 0;
+    height: 470px; 
+}
+
+.contact-image img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 main h2 {
@@ -69,48 +173,17 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    width: 100%;
-    /* Elimina el margin-top y el posicionamiento */
-}
-
-/* Botonera - Estilo de los botones */
-.botonera {
     margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    width: 100%;
 }
 
-.btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 60px 100px; /* Aumenta el relleno para hacer los botones más grandes */
-    border: none;
-    font-size: 1.5rem;  /* Aumenta el tamaño de la fuente */
-    cursor: pointer;
-    border-radius: 8px; /* Un poco más de radio para suavizar las esquinas */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-.btn:focus {
-    outline: none;
-}
-
-/* Responsividad para los botones */
 @media (max-width: 768px) {
-    .botonera {
+    nav ul {
         flex-direction: column;
         align-items: center;
     }
 
-    .btn {
-        width: 100%;
-        text-align: center;
-        font-size: 1.5rem; /* Asegúrate de que el tamaño de fuente también se mantenga grande en pantallas pequeñas */
+    nav ul li {
+        margin: 10px 0;
     }
 }

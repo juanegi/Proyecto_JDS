@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: #4cae4f;
+    background-color: #4CAF50;
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -34,6 +34,8 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
+    text-decoration: none;
+
 }
 
 .nav-links li {
@@ -51,6 +53,32 @@ header {
     color: #9BDCB8;
     border-bottom: 2px solid #00796b;
 }
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #e0e0e0;
+}
 
 main {
     padding: 2rem;
@@ -58,27 +86,26 @@ main {
     flex: 1;
 }
 
-/* Estilos para la sección de contacto */
 .contact-container {
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    gap: 120px; /* Espacio entre los dos divs */
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
     width: 90%;
-    margin: 20px auto; /* Centra el contenedor en la página */
+    margin: 20px auto;
 }
 
 .contact-image,
 .contact-form {
-    flex: 1; /* Ambos divs ocuparán el mismo espacio */
-    min-width: 0; /* Asegura que el contenido no se desborde */
-    height: 470px; /* Define una altura específica para ambos */
+    flex: 1;
+    min-width: 0;
+    height: 470px; 
 }
 
 .contact-image img {
-    width: 100%; /* La imagen se ajustará al contenedor */
-    height: 100%; /* La imagen tendrá la altura completa del contenedor */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
     border-radius: 8px;
 }
 
@@ -86,9 +113,9 @@ main {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: #fff; /* Fondo blanco para el formulario */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h2 {
@@ -114,13 +141,13 @@ main {
 }
 
 .form-group textarea {
-    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+    resize: vertical; 
 }
 
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #4CAF50; /* Color del botón */
+    background-color: #4CAF50;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -128,9 +155,18 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Color del botón al pasar el ratón por encima */
+    background-color: #45a049;
 }
 
+main h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+main p {
+    font-size: 1.2rem;
+    color: #666;
+}
 
 footer {
     background-color: #333;
